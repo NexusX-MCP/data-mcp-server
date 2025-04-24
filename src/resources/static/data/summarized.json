@@ -1,0 +1,80 @@
+[
+  {
+    "pathname": "/",
+    "data": {}
+  },
+  {
+    "pathname": "/what-are-headless-browsers",
+    "data": {}
+  },
+  {
+    "pathname": "/get-started/quickstart/scraping",
+    "data": {}
+  },
+  {
+    "pathname": "/get-started/quickstart/crawling",
+    "data": {
+      "markdown": "Crawling \\| Data\n\n1\n\n### [Direct link to heading](https://www.docs.data.ai/get-started/quickstart/crawling\\#install-data)    Install Data\n\nNodePython\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nnpm install @data/sdk\n```\n\nor\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nyarn add @data/sdk\n```\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\npip install data\n```\n\nor\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nuv add data\n```\n\n2\n\n### [Direct link to heading](https://www.docs.data.ai/get-started/quickstart/crawling\\#setup-your-environment)    Setup your Environment\n\nTo use Data with your code, you will need an API Key. You can get one easily from the [dashboard](https://app.data.ai/settings?tab=api_key). Once you have your API Key, add it to your `.env` file as `DATA_API_KEY` .\n\n3\n\n### [Direct link to heading](https://www.docs.data.ai/get-started/quickstart/crawling\\#crawl-a-site)    Crawl a Site\n\nNext, you can crawl any site by simply setting up the Data client and providing the site's url.\n\nNodePython\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nimport { Data } from \"@data/sdk\";\nimport { config } from \"dotenv\";\n\nconfig();\n\nconst client = new Data({\n  apiKey: process.env.DATA_API_KEY,\n});\n\nconst main = async () => {\n  const crawlResult = await client.crawl.startAndWait({\n    url: \"https://data.ai\",\n  });\n  console.log(\"Crawl result:\", crawlResult);\n};\n\nmain();\n```\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nimport os\nfrom dotenv import load_dotenv\nfrom data import AsyncData as Data\nfrom data.models.crawl import StartCrawlJobParams\n\n# Load environment variables from .env file\nload_dotenv()\n\n# Initialize Data client\nclient = Data(api_key=os.getenv(\"DATA_API_KEY\"))\n\nasync def main():\n    # Start crawling and wait for completion\n    crawl_result = await client.crawl.start_and_wait(\n        StartCrawlJobParams(url=\"https://data.ai\")\n    )\n    print(\"Crawl result:\")\n    print(crawl_result.model_dump_json(indent=2))\n\nif __name__ == \"__main__\":\n    import asyncio\n\n    asyncio.run(main())\n```\n\n4\n\n### [Direct link to heading](https://www.docs.data.ai/get-started/quickstart/crawling\\#view-session-in-dashboard)    View Session in Dashboard\n\nYou can view all your sessions in the [dashboard](https://app.data.ai/) and see their recordings or other key metrics like logs.\n\n[PreviousScraping](https://www.docs.data.ai/get-started/quickstart/scraping) [NextPuppeteer](https://www.docs.data.ai/get-started/quickstart/puppeteer)\n\nLast updated 8 days ago",
+      "metadata": {
+        "url": "https://docs.data.ai/get-started/quickstart/crawling",
+        "title": "Crawling | Data",
+        "robots": "index, follow",
+        "og:image": "https://docs.data.ai/~gitbook/ogimage/igycZQMZI66cnXvNxbMh",
+        "og:title": "Crawling | Data",
+        "viewport": "width=device-width, initial-scale=1",
+        "generator": "GitBook (fc00b51)",
+        "link:icon": "https://docs.data.ai/~gitbook/image?url=https%3A%2F%2F4086371784-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252F-MjSP1cG6WWBpRLZETsb%252Fsites%252Fsite_47QD9%2",
+        "sourceURL": "https://www.docs.data.ai/get-started/quickstart/crawling",
+        "description": "Crawl a site and all it's links.",
+        "color-scheme": "dark",
+        "link:preload": "https://static.gitbook.com/_next/static/chunks/webpack-3669b6c2f2acdd0a.js",
+        "twitter:card": "summary_large_image",
+        "twitter:image": "https://docs.data.ai/~gitbook/ogimage/igycZQMZI66cnXvNxbMh",
+        "twitter:title": "Crawling | Data",
+        "link:canonical": "https://docs.data.ai/get-started/quickstart/crawling",
+        "og:description": "Crawl a site and all it's links.",
+        "link:preconnect": "https://static.gitbook.com/",
+        "link:stylesheet": "https://static.gitbook.com/_next/static/css/4af9aafd612346fe.css",
+        "twitter:description": "Crawl a site and all it's links."
+      },
+      "html": null,
+      "url": "https://www.docs.data.ai/get-started/quickstart/crawling",
+      "status": "completed",
+      "error": null
+    },
+    "summary": "The \"Crawling\" page of Data covers the tool's web scraping capabilities and how to implement them."
+  },
+  {
+    "pathname": "/get-started/quickstart",
+    "data": {
+      "markdown": "Quickstart \\| Data\n\n![](https://docs.data.ai/~gitbook/image?url=https%3A%2F%2F4095930873-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FfwZVRs9Jmwzw9cfbchYG%252Fuploads%252FVjV04cIkThJDJ36JJhPF%252FUntitled.png%3Falt%3Dmedia%26token%3D0f3c2955-2d73-4b0f-8adc-428eeb96ca02&width=768&dpr=4&quality=100&sign=510f4f50&sv=2)\n\nWelcome to Data, the Internet for AI. Get started in minutes with our browser automation, scraping, and crawling tools.\n\n### [Direct link to heading](https://www.docs.data.ai/get-started/quickstart\\#get-started-in-three-simple-steps)    Get Started in Three Simple Steps\n\n1. **Create an Account**: Sign up at the [dashboard](https://app.data.ai/signup)\n\n2. **Get Your API Key**: Find it in your [account settings](https://app.data.ai/settings?tab=api_key)\n\n3. **Write your first scrape**\n\n\nNodeJSPython\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nimport { Data } from \"@data/sdk\";\n\nconst client = new Data({\n  apiKey: process.env.DATA_API_KEY,\n});\n\nconst scrapeResult = await client.scrape.startAndWait({\n  url: \"https://example.com\",\n});\nconsole.log(scrapeResult.content);\n```\n\nCopy\n\n```inline-grid min-w-full grid-cols-[auto_1fr] p-2 [count-reset:line]\nfrom data import AsyncData\nfrom data.models.scrape import StartScrapeJobParams\n\nclient = AsyncData(api_key=os.getenv(\"DATA_API_KEY\"))\n\nscrape_result = await client.scrape.start_and_wait(\n    StartScrapeJobParams(url=\"https://example.com\")\n)\nprint(scrape_result.content)\n```\n\nCongratulations, you've scraped your first web page ! Welcome to the world of AI agents, and browser automations\n\nCheck out our in-depth SDK references for [Node](https://www.docs.data.ai/reference/sdks/node) and [Python](https://www.docs.data.ai/reference/sdks/python).\n\n[PreviousWhat are Headless browsers ?](https://www.docs.data.ai/what-are-headless-browsers) [NextScraping](https://www.docs.data.ai/get-started/quickstart/scraping)\n\nLast updated 8 days ago",
+      "metadata": {
+        "url": "https://docs.data.ai/get-started/quickstart",
+        "title": "Quickstart | Data",
+        "robots": "index, follow",
+        "og:image": "https://docs.data.ai/~gitbook/ogimage/CyH2xJQs9yWJ1S8BYNav",
+        "og:title": "Quickstart | Data",
+        "viewport": "width=device-width, initial-scale=1",
+        "generator": "GitBook (fc00b51)",
+        "link:icon": "https://docs.data.ai/~gitbook/image?url=https%3A%2F%2F4086371784-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252F-MjSP1cG6WWBpRLZETsb%252Fsites%252Fsite_47QD9%2",
+        "sourceURL": "https://www.docs.data.ai/get-started/quickstart",
+        "description": "Get setup with Data in minutes.",
+        "color-scheme": "dark",
+        "link:preload": "https://static.gitbook.com/_next/static/chunks/webpack-3669b6c2f2acdd0a.js",
+        "twitter:card": "summary_large_image",
+        "twitter:image": "https://docs.data.ai/~gitbook/ogimage/CyH2xJQs9yWJ1S8BYNav",
+        "twitter:title": "Quickstart | Data",
+        "link:canonical": "https://docs.data.ai/get-started/quickstart",
+        "og:description": "Get setup with Data in minutes.",
+        "link:preconnect": "https://static.gitbook.com/",
+        "link:stylesheet": "https://static.gitbook.com/_next/static/css/4af9aafd612346fe.css",
+        "twitter:description": "Get setup with Data in minutes."
+      },
+      "html": null,
+      "url": "https://www.docs.data.ai/get-started/quickstart",
+      "status": "completed",
+      "error": null
+    },
+    "summary": "Quickstart guide for Data provides initial setup and functionality instructions for effective web scraping and automation."
+  }
+]

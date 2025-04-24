@@ -1,0 +1,1 @@
+DATA_API_KEY="[your-api-key]" npx -y data-mcp
